@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume - Your Name</title>
+<style>
+  /* ---- Global Styles ---- */
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+  body { background: #f4f4f4; padding: 20px; }
+  a { text-decoration: none; color: inherit; }
+
+  /* ---- Resume Container ---- */
+  .resume {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  /* ---- Header ---- */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  .header h1 {
+    font-size: 32px;
+    color: #333;
+  }
+
+  .header .contact {
+    text-align: right;
+    font-size: 14px;
+  }
+
+  .header .contact div { margin-bottom: 5px; }
+
+  /* ---- Section Titles ---- */
+  .section-title {
+    font-size: 20px;
+    color: #ff4d6d;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ff4d6d;
+    display: inline-block;
+    padding-bottom: 3px;
+  }
+
+  /* ---- Sections ---- */
+  .section {
+    margin-bottom: 25px;
+  }
+
+  .section p, .section li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  /* ---- Skills ---- */
+  .skill {
+    margin-bottom: 10px;
+  }
+
+  .skill-name {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .skill-bar {
+    width: 100%;
+    background: #eee;
+    height: 8px;
+    border-radius: 4px;
+  }
+
+  .skill-level {
+    height: 8px;
+    border-radius: 4px;
+    background: #ff4d6d;
+  }
+
+  /* ---- Education / Experience ---- */
+  .item {
+    margin-bottom: 15px;
+  }
+
+  .item h4 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 3px;
+  }
+
+  .item span {
+    font-size: 13px;
+    color: #888;
+  }
+
+  /* ---- JavaScript Animation Example (Optional) ---- */
+  .skill-level {
+    width: 0;
+    transition: width 1s ease-in-out;
+  }
+</style>
+</head>
+<body>
+
+<div class="resume">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Your Name</h1>
+    <div class="contact">
+      <div>Email: youremail@example.com</div>
+      <div>Phone: +91 1234567890</div>
+      <div>LinkedIn: linkedin.com/in/yourname</div>
+      <div>GitHub: github.com/yourusername</div>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="section">
+    <div class="section-title">Summary</div>
+    <p>Creative and detail-oriented software engineer with experience in web development, programming, and problem-solving. Skilled in HTML, CSS, JavaScript, and frameworks like React and Node.js.</p>
+  </div>
+
+  <!-- Skills -->
+  <div class="section">
+    <div class="section-title">Skills</div>
+    <div class="skill">
+      <div class="skill-name">HTML / CSS</div>
+      <div class="skill-bar"><div class="skill-level" data-level="90%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">JavaScript</div>
+      <div class="skill-bar"><div class="skill-level" data-level="85%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">React.js</div>
+      <div class="skill-bar"><div class="skill-level" data-level="75%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Node.js</div>
+      <div class="skill-bar"><div class="skill-level" data-level="70%"></div></div>
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <div class="section">
+    <div class="section-title">Experience</div>
+    <div class="item">
+      <h4>Software Developer | ABC Company</h4>
+      <span>Jan 2023 - Present</span>
+      <p>Developed responsive web applications using HTML, CSS, JavaScript, and React. Collaborated with cross-functional teams and optimized performance.</p>
+    </div>
+    <div class="item">
+      <h4>Intern | XYZ Solutions</h4>
+      <span>Jun 2022 - Dec 2022</span>
+      <p>Assisted in building interactive web components and gained experience in REST APIs and frontend frameworks.</p>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="item">
+      <h4>B.Tech in Computer Science</h4>
+      <span>ABC College, 2020 - 2024</span>
+    </div>
+    <div class="item">
+      <h4>High School</h4>
+      <span>XYZ School, 2018 - 2020</span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Animate skill bars
+  window.addEventListener('load', () => {
+    const skillLevels = document.querySelectorAll('.skill-level');
+    skillLevels.forEach(skill => {
+      skill.style.width = skill.getAttribute('data-level');
+    });
+  });
+</script>
+
+</body>
+</html>
